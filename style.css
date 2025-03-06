@@ -1,0 +1,339 @@
+:root {
+    --primary-color: #c9940e;
+    --secondary-color: #C0C0C0;
+    --background-color: #222;
+    --default-gap: 1rem;
+}
+
+html{
+    width: 100%;
+    max-width: 80em;
+    margin: 0 auto;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: var(--background-color);
+}
+
+.mainHeader {
+    padding: 1em;
+    margin: 0 auto;
+}
+
+.mainHeader__logotipo {
+    font-family: "Great Vibes", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.mainHeader__logotipo a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color ease-in-out .2s;
+}
+
+.mainHeader__logotipo a:hover {
+    color: color-mix(in srgb, var(--primary-color), var(--secondary-color) 80%);
+}
+
+.mainHeader__menu {
+    width: 100%;
+    text-align: center;
+}
+
+.mainHeader__menu ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.mainHeader__menu a {
+    text-decoration: none;
+    color: var(--primary-color);
+    display: block;
+    padding: .6em 0;
+    transition: all ease-in-out .28s;
+}
+
+.mainHeader__menu a:hover {
+    background-color: color-mix(in srgb, var(--background-color), var(--secondary-color) 8%);
+    color: color-mix(in srgb, var(--primary-color), var(--secondary-color) 80%);
+}
+
+.maxWidth {
+    max-width: 64em;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--default-gap);
+    justify-content: center;
+}
+
+.row.maxWidth {
+    margin-bottom: 4em;
+}
+
+.mainContent__article {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 12.5em;
+    max-width: 18.75em;
+}
+
+.mainContent .row {
+    row-gap: 3em;
+}
+
+.contentWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--default-gap);
+    min-height: 100vh;
+    /* Garante que o mainContainer ocupe pelo menos a altura da viewport */
+}
+
+.mainContent {
+    flex: 1;
+    /* Faz com que o conteúdo principal ocupe o espaço disponível */
+    padding: 1em 2em 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mainContent__banner {
+    display: none;
+    margin: 0;
+    padding: 0;
+}
+
+.mainContent__container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    flex: 1;
+    padding: 1em;
+    box-shadow: 5px 5px 5px 2px rgb(32, 32, 32, 0.6);
+    outline: 2px solid rgb(201, 148, 14, .2);
+    transition: box-shadow ease-in-out .3s;
+}
+
+.mainContent__mainTitle,
+.mainFooter__title,
+.sideMenu__title {
+    color: var(--primary-color);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.6em;
+    margin-top: 0;
+    margin-bottom: 1.4em;
+    line-height: 1.2em;
+    text-align: center;
+}
+
+.mainContent__img img {
+    width: 100%;
+    max-width: 30em;
+}
+
+.mainContent__title {
+    color: var(--primary-color);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: .875em;
+    margin-bottom: 1.4em;
+    line-height: 1.2em;
+    text-decoration: none;
+    transition: color ease-in-out .2s;
+}
+
+.mainContent__title:hover {
+    color: color-mix(in srgb, var(--primary-color), var(--secondary-color) 80%);
+}
+
+.mainContent__text {
+    flex: 1;
+}
+
+.mainContent__text p {
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: .7em;
+    line-height: 1.5em;
+    letter-spacing: .06em;
+}
+
+.mainContent__container .btn {
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    background-color: var(--background-color);
+    color: var(--secondary-color);
+    outline: 1px solid var(--primary-color);
+    padding: .5em .8em;
+    align-self: flex-end;
+    border-radius: 5px;
+    transition: all ease-in-out .3s;
+    margin-top: 1em;
+}
+
+.mainContent__container .btn:hover {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+}
+
+.mainFooter {
+    width: 100%;
+    margin: 0 auto;
+    /* padding: 1em; */
+    background-color: var(--background-color);
+}
+
+.address {
+    padding: 1em;
+}
+
+.address a,
+p {
+    text-decoration: none;
+    color: var(--secondary-color);
+    transition: color ease-in-out .3s;
+    display: inline-block;
+    width: 100%;
+    padding: .7em 0;
+    margin: .3em 0;
+}
+
+.address a:hover {
+    color: var(--primary-color);
+}
+
+.mainFooter__map {
+    display: none;
+}
+
+.mainHeader__menu span[class^="icon"],
+.address span[class^="icon"] {
+    color: var(--primary-color);
+    margin-right: .6em;
+}
+
+.sideMenu {
+    width: 12.5em;
+    background-color: var(--background-color);
+    padding: 1em;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    gap: 1em;
+    height: 100%;
+    max-height: 75em; /* Limita a altura do .sideMenu */
+    overflow-y: auto; /* Adiciona rolagem interna se o conteúdo for maior que a altura */
+    overflow-x: hidden;
+}
+
+.sideMenu__list a {
+    text-decoration: none;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    padding: 0.5em;
+    transition: all ease-in-out 0.3s;
+}
+
+.sideMenu__list a:hover {
+    background-color: color-mix(in srgb, var(--background-color), var(--secondary-color) 8%);
+    color: color-mix(in srgb, var(--primary-color), var(--secondary-color) 80%);
+}
+
+.sideMenu__list span[class^="icon"] {
+    margin-right: 0.5em;
+    color: var(--primary-color);
+}
+
+@media screen and (min-width: 37.6em) {
+    .mainHeader {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .mainHeader__logotipo {
+        width: 100%;
+        margin-left: auto;
+    }
+
+    .mainHeader__menu ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .mainHeader__menu li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mainHeader__menu a {
+        text-decoration: none;
+        color: var(--primary-color);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: .9em;
+        padding: 1.2em;
+    }
+
+    .mainHeader__menu span[class^="icon"] {
+        font-size: 1em;
+        margin-right: 0;
+        margin-bottom: .4em;
+    }
+
+    .mainContent__banner {
+        display: block;
+        width: calc(100% - 4em);
+        box-shadow: 1px 1px 10px 1px rgb(0, 0, 0, .6);
+        margin: 2em auto;
+    }
+
+    .mainContent__container {
+        max-width: 13.82em;
+    }
+
+    .mainContent__img img {
+        max-width: 13.82em;
+    }
+
+    .mainFooter__map {
+        display: block;
+        width: 100%;
+        height: 15em;
+    }
+}
+
+@media screen and (min-width: 60.876em) {
+    .mainContainer {
+        flex-direction: row;
+    }
+
+    .sideMenu {
+        display: flex;
+    }
+
+    .mainContent {
+        margin-right: 1rem;
+    }
+}
