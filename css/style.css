@@ -238,7 +238,7 @@ p {
     flex-direction: column;
     gap: 1em;
     height: 100%;
-    max-height: 75em; /* Limita a altura do .sideMenu */
+    max-height: 65em; /* Limita a altura do .sideMenu */
     overflow-y: auto; /* Adiciona rolagem interna se o conteúdo for maior que a altura */
     overflow-x: hidden;
 }
